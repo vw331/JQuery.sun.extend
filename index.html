@@ -3,8 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>abc</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	<script src="jQuery.sun.extend.js"></script>
 </head>
 <body>
 	
+	<p>用户设备: <span data-device-type></span></p>
+	<form action="" id="form">
+		<input type="text" name="name">
+		<select name="gender" id="">
+			<option value="male">男</option>
+			<option value="female">女</option>
+		</select>
+		<input type="checkbox" name="hobby" value="basketball">
+		<input type="checkbox" name="hobby" value="football">
+	</form>
+
+	<script>
+		$('[data-device-type]').text( $.detectDeviceType() )
+	</script>
 </body>
 </html>
